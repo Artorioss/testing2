@@ -1,0 +1,6 @@
+D:\Разное\GetRequest\RequestLibrary\bin\Debug\RequestLibrary.dll
+D:\Разное\GetRequest\RequestLibrary\bin\Debug\RequestLibrary.pdb
+D:\Разное\GetRequest\RequestLibrary\obj\Debug\RequestLibrary.csproj.AssemblyReference.cache
+D:\Разное\GetRequest\RequestLibrary\obj\Debug\RequestLibrary.csproj.CoreCompileInputs.cache
+D:\Разное\GetRequest\RequestLibrary\obj\Debug\RequestLibrary.dll
+D:\Разное\GetRequest\RequestLibrary\obj\Debug\RequestLibrary.pdb
