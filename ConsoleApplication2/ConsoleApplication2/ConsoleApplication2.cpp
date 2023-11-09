@@ -2,18 +2,59 @@
 
 using namespace std;
 
-class Smartphone 
+class Phone 
 {
-public:
+protected:
     string model;
     string processor;
     int ram;
 
-    Smartphone(string _model, string _processor, int _ram)
+public:
+    Phone(string _model, string _processor, int _ram)
         : model(_model), processor(_processor), ram(_ram) {}
 
     void makeCall() {
-        cout << "Звонок с " << model << endl;
+        //printf1("%d", str);
+        cout << "Звонок с телефона" << endl;
+    }
+
+    void formattedOutput() 
+    {
+        int num = 123;
+        printf("Число: %d\n", num); // выводит строку и значение переменной с переводом строки
+        printf("Число в hex: %x\n", num); // выводит значение переменной в шестнадцатеричном формате
+        printf("Число в oct: %o\n", num); // выводит значение переменной в восьмеричном формате
+        printf("Число в scientific: %e\n", (float)num); // выводит значение переменной в научном формате
+    }
+
+    void formattedInput() 
+    {
+        int num;
+        printf("Введите число: ");
+        scanf_s("%d", &num); // считывает значение, введенное пользователем, и сохраняет в переменную num
+        printf("Вы ввели: %d\n", num);
+    }
+};
+
+struct Smartphone: Phone
+{
+public:
+    Smartphone(string _model, string _processor, int _ram): Phone(_model, _processor, _ram)
+    {
+    
+    }
+
+    void sendMessage() {
+        cout << "Отправка сообщения с " << model << endl;
+    }
+};
+
+struct IPhone12: Phone
+{
+
+public:
+    IPhone12() : Phone("IPhone12", "A15 Bionic", 4)
+    {
     }
 
     void sendMessage() {
@@ -85,6 +126,7 @@ public:
     void adjustSettings() {
         cout << "Изменение настроек камеры " << model << endl;
     }
+  //  printf();
 };
 
 
@@ -123,8 +165,14 @@ int main()
     Camera canonEOS("Canon EOS R5", 45, "RF");
     Headphones airPods("AirPods Pro", "беспроводные", "20 Гц - 20 кГц");
 
+    //Наследование
+    IPhone12 iphone12 = IPhone12();
+    iphone12.makeCall();
+    iphone12.formattedInput();
+    iphone12.formattedOutput();
+
     iphone13.makeCall();
-    iphone13.makeCall();
+    iphone14.makeCall();
     galaxyS21.sendMessage();
     macbookPro.runApplication();
     lgOLED.turnOn();
